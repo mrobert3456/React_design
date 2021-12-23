@@ -1,44 +1,44 @@
 import React from 'react';
 
-import styled from 'styled-components';
-import './Button.css';
+// import styled from 'styled-components';
+ import styles from './Button.module.css'; //css modules, the styling is scoped to the component
 
-const Button = styled.button`
-  font: inherit;
-  width:100%;
-  padding: 0.5rem 1.5rem;
-  border: 1px solid #8b005d;
-  color: white;
-  background: #8b005d;
-  box-shadow: 0 0 4px rgba(0, 0, 0, 0.26);
-  cursor: pointer;
+// const Button = styled.button` //the styling is scoped to the component
+//   font: inherit;
+//   width:100%;
+//   padding: 0.5rem 1.5rem;
+//   border: 1px solid #8b005d;
+//   color: white;
+//   background: #8b005d;
+//   box-shadow: 0 0 4px rgba(0, 0, 0, 0.26);
+//   cursor: pointer;
 
-  /*
-  with media query we can set the button to change its size dynamically
-  according to the page sizes 
-  */
-  @media (min-width :768px){
-    width :auto;
-  }
+//   /*
+//   with media query we can set the button to change its size dynamically
+//   according to the page sizes 
+//   */
+//   @media (min-width :768px){
+//     width :auto;
+//   }
 
-&:focus {
-  outline: none;
-}
+// &:focus {
+//   outline: none;
+// }
 
-&:hover,
-&:active {
-  background: #ac0e77;
-  border-color: #ac0e77;
-  box-shadow: 0 0 8px rgba(0, 0, 0, 0.26);
-}
-`;
+// &:hover,
+// &:active {
+//   background: #ac0e77;
+//   border-color: #ac0e77;
+//   box-shadow: 0 0 8px rgba(0, 0, 0, 0.26);
+// }
+// `;
 
-//const Button = props => {
-//  return (
-//    <button type={props.type} className="button" onClick={props.onClick}>
-//      {props.children}
-//    </button>
-//  );
-//};
+const Button = props => {
+  return (
+    <button type={props.type} className={styles.button} onClick={props.onClick}>
+      {props.children}
+    </button>
+  );
+};
 
 export default Button;
