@@ -13,6 +13,10 @@ const Button = styled.button`
   box-shadow: 0 0 4px rgba(0, 0, 0, 0.26);
   cursor: pointer;
 
+  /*
+  with media query we can set the button to change its size dynamically
+  according to the page sizes 
+  */
   @media (min-width :768px){
     width :auto;
   }
